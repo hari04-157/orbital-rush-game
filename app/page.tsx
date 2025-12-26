@@ -1099,8 +1099,8 @@ function ScrollyGame() {
   );
 }
 
-// --- SOLANA WRAPPER ---
-export function App() {
+// --- SOLANA WRAPPER (FIXED EXPORT) ---
+export default function GamePage() {
   const network = WalletAdapterNetwork.Devnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
   const wallets = useMemo(
@@ -1118,5 +1118,3 @@ export function App() {
     </ConnectionProvider>
   );
 }
-
-export { App as default };
